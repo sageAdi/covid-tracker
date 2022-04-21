@@ -11,10 +11,6 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from '@mui/material';
 
-// const useStyles = {
-//   navabarMenu: { width: '100%', height: '100%', maxHeight: 'unset', maxWidth: 'unset' }
-// };
-
 const pages = ['Home', 'Updates', 'About', 'Symptoms', 'Prevention'];
 
 function ResponsiveAppBar() {
@@ -29,18 +25,33 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{
+              flexGrow: 1,
+              mr: 2,
+              display: {
+                xs: 'none',
+                md: 'flex'
+              }
+            }}
           >
             Covid-19
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: 'flex',
+                md: 'none'
+              }
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -54,15 +65,35 @@ function ResponsiveAppBar() {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left'
+              }}
               keepMounted
-              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left'
+              }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' }, '& div': { width: '100%' } }}
+              sx={{
+                display: {
+                  xs: 'block',
+                  md: 'none'
+                },
+                '& div': {
+                  width: '100%'
+                }
+              }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} sx={{ width: '100%' }}>
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    width: '100%'
+                  }}
+                >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -73,18 +104,35 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: 'flex',
+                md: 'none'
+              }
+            }}
           >
             Covid-19
           </Typography>
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              display: {
+                xs: 'none',
+                md: 'flex'
+              }
+            }}
+          >
             {pages.map((page) => (
               <Button
                 LinkComponent={Link}
                 href={`#${page}`}
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: 'white',
+                  display: 'block'
+                }}
               >
                 {page}
               </Button>
