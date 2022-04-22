@@ -4,16 +4,17 @@ import axios from 'axios';
 import Dashboard from './pages/Dashboard/Dashboard';
 import LandingPage from './pages/LangingPage/LandingPage';
 import Navbar from './components/Navbar/Navbar';
+import Maps from './pages/Dashboard/Maps';
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([{}]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     const fetchStatics = async () => {
       setIsLoading(true);
       await axios
         .get(
-          'https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/world',
+          'https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/',
           {
             headers: {
               'X-RapidAPI-Host':
@@ -22,7 +23,7 @@ function App() {
             }
           }
         )
-        .then((res) => setData(res.data[0]))
+        .then((res) => setData(res.data))
         .then(() => setIsLoading(false));
     };
     fetchStatics();
@@ -32,7 +33,8 @@ function App() {
     <div className="App">
       <Navbar />
       <LandingPage />
-      <Dashboard data={data} isLoading={isLoading} />
+      <Dashboard data={data[0]} isLoading={isLoading} />
+      <Maps data={data} />
     </div>
   );
 }
