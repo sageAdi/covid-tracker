@@ -34,7 +34,13 @@ function LandingPage() {
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="h1" component="h2">
+              <Typography
+                variant="h1"
+                component="h2"
+                sx={{
+                  fontWeight: '700'
+                }}
+              >
                 COVID-19
               </Typography>
             </Grid>
@@ -45,7 +51,7 @@ function LandingPage() {
               </Typography>
             </Grid>
             <Grid item>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="secondary">
                 Track Covid-19
               </Button>
             </Grid>
