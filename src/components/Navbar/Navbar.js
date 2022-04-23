@@ -108,7 +108,18 @@ function ResponsiveAppBar() {
                       width: '100%'
                     }}
                   >
-                    <Typography textAlign="center">{page}</Typography>
+                    <Button
+                      LinkComponent={Link}
+                      href={`#${page}`}
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        my: 2,
+                        display: 'block'
+                      }}
+                    >
+                      {page}
+                    </Button>
                   </MenuItem>
                 ))}
               </Menu>

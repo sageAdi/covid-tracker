@@ -49,7 +49,8 @@ function About() {
             src="./about_pic.png"
             alt="covid-logo"
             sx={{
-              height: '220px'
+              width: '80%',
+              borderRadius: 2
             }}
           />
         </Grid>

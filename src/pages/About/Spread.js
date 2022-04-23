@@ -28,7 +28,9 @@ function Spread() {
       <Typography variant="h6" color="#fff" component="div">
         HOW DOES CORONA VIRUS SPREAD?
       </Typography>
-      <Typography variant="h5">HOW IT SPREADS</Typography>
+      <Typography variant="h5" sx={{ fontWeight: 300 }} gutterBottom>
+        HOW IT SPREADS
+      </Typography>
       <Grid container spacing={2} justifyContent="center">
         <Grid item sm={4} xs={12}>
           <SpreadCard

@@ -25,7 +25,7 @@ export default function SpreadCard({ icon, title, body }) {
 }
 
 SpreadCard.propTypes = {
-  icon: PropTyes.element.isRequired,
+  icon: PropTyes.shape().isRequired,
   title: PropTyes.string.isRequired,
   body: PropTyes.string.isRequired
 };
