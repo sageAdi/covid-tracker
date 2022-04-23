@@ -25,7 +25,7 @@ function Prevention() {
       }}
       id="Prevention"
     >
-      <Grid container spacing={1}>
+      <Grid container>
         <Grid item md={3} xs={12}>
           <Typography variant="h5" color="primary">
             Covid-19 preventions
@@ -34,17 +34,9 @@ function Prevention() {
             What are Covid-19 PREVENTIONS ?
           </Typography>
         </Grid>
-        <Grid
-          item
-          container
-          md={9}
-          xs={12}
-          spacing={2}
-          sx={{ background: '#3d1bb6', borderRadius: 2 }}
-          p={2}
-        >
+        <Grid item container md={9} xs={12} sx={{ background: '#3d1bb6', borderRadius: 2 }} p={2}>
           {prevention.map((item, index) => (
-            <Grid item xs={4}>
+            <Grid item md={4} xs={12} p={1} key={item}>
               <PrecautionCard icon={icons[index]} title={item} body={description[index]} />
             </Grid>
           ))}

@@ -10,7 +10,13 @@ import SpreadCard from '../../components/SpreadCard/SpreadCard';
 
 function Spread() {
   const theme = useTheme();
-
+  const titles = ['Contanimted', 'Human Contact', 'Social Gathering'];
+  const descriptions = [
+    'It may be possible that a person can get COVID-19 by touching a surface or object that has the virus on it and then touching their own mouth, nose, or possibly their eyes. This is not thought to be the main way the virus spreads.',
+    'COVID-19 is thought to spread mainly through close contact from person-to-person in respiratory droplets from someone who is infected. People who are infected with coronavirus often have symptoms of illness.',
+    'If an infected person coughs or sneezes their droplets can infect people nearby. That’s why it’s important to avoid close contact with others. Understand that people may be infected and have only to no symptoms at all.'
+  ];
+  const icons = [CoronavirusIcon, BlockIcon, SocialDistanceIcon];
   return (
     <Container
       maxWidth="xl"
@@ -31,28 +37,12 @@ function Spread() {
       <Typography variant="h5" sx={{ fontWeight: 300 }} gutterBottom>
         HOW IT SPREADS
       </Typography>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item sm={4} xs={12}>
-          <SpreadCard
-            icon={CoronavirusIcon}
-            title="Contanimted"
-            body="It may be possible that a person can get COVID-19 by touching a surface or object that has the virus on it and then touching their own mouth, nose, or possibly their eyes. This is not thought to be the main way the virus spreads."
-          />
-        </Grid>
-        <Grid item sm={4} xs={12}>
-          <SpreadCard
-            icon={BlockIcon}
-            title="Human Contact"
-            body="COVID-19 is thought to spread mainly through close contact from person-to-person in respiratory droplets from someone who is infected. People who are infected with coronavirus often have symptoms of illness."
-          />
-        </Grid>
-        <Grid item sm={4} xs={12}>
-          <SpreadCard
-            icon={SocialDistanceIcon}
-            title="Social Gathering"
-            body="If an infected person coughs or sneezes their droplets can infect people nearby. That’s why it’s important to avoid close contact with others. Understand that people may be infected and have only to no symptoms at all."
-          />
-        </Grid>
+      <Grid container justifyContent="center">
+        {titles.map((title, index) => (
+          <Grid item sm={4} xs={12} key={title} p={1}>
+            <SpreadCard icon={icons[index]} title={title} body={descriptions[index]} />
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );

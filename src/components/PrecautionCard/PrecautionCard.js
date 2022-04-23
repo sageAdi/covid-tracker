@@ -21,7 +21,7 @@ export default function PrecautionCard({ icon, title, body }) {
 }
 
 PrecautionCard.propTypes = {
-  icon: PropTyes.shape().isRequired,
+  icon: PropTyes.oneOfType([PropTyes.string, PropTyes.shape()]).isRequired,
   title: PropTyes.string.isRequired,
   body: PropTyes.string.isRequired
 };

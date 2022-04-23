@@ -25,23 +25,20 @@ function Symptoms() {
       }}
       id="Symptoms"
     >
-      <Grid container spacing={1} justifyContent="space-between" alignItems="center">
-        <Grid
-          item
-          md={9}
-          xs={12}
-          container
-          spacing={2}
-          sx={{ bgcolor: '#23ae41', borderRadius: 2 }}
-          p={2}
-        >
+      <Grid
+        container
+        justifyContent="space-between"
+        alignItems="center"
+        sx={{ flexDirection: { xs: 'column-reverse', md: 'row' } }}
+      >
+        <Grid item md={9} xs={12} container sx={{ bgcolor: '#23ae41', borderRadius: 2 }} p={2}>
           {symptoms.map((item, index) => (
-            <Grid item xs>
+            <Grid item xs p={1} key={item}>
               <SymptomCard icon={icons[index]} title={item} body={description[index]} />
             </Grid>
           ))}
         </Grid>
-        <Grid item md={3} xs={12}>
+        <Grid item md={3} xs={12} p={1}>
           <Typography variant="h5" color="primary">
             Know your symptoms
           </Typography>

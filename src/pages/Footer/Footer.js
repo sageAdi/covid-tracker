@@ -7,7 +7,10 @@ import {
   ListItemText,
   Paper,
   Typography,
-  ListItemIcon
+  ListItemIcon,
+  Button,
+  IconButton,
+  useTheme
 } from '@mui/material';
 import CallIcon from '@mui/icons-material/Call';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -16,14 +19,15 @@ import React from 'react';
 import { Mail } from '@mui/icons-material';
 
 function Footer() {
+  const theme = useTheme();
   return (
     <Paper sx={{ marginTop: '5rem', bgcolor: '#222222', color: '#fff' }}>
       <Container maxWidth="xl">
-        <Grid container spacing={2} justifyContent="space-between" alignItems="center">
-          <Grid item>
+        <Grid container justifyContent="space-between" alignItems="flex-start">
+          <Grid item md xs={6} p={1}>
             <Typography variant="h6">Quick Links</Typography>
             <nav aria-label="Quick links">
-              <List>
+              <List sx={{ display: { md: 'block', xs: 'none' } }}>
                 <ListItem disablePadding>
                   <ListItemButton component="a" href="#Home">
                     <ListItemText primary="Home" />
@@ -51,14 +55,28 @@ function Footer() {
                 </ListItem>
               </List>
             </nav>
+            <Grid container sx={{ display: { md: 'none', xs: 'flex' } }}>
+              <Button>Home</Button>
+              <Button>Updates</Button>
+              <Button>About</Button>
+              <Button>Symptoms</Button>
+              <Button>Precautions</Button>
+            </Grid>
           </Grid>
-          <Grid item xs sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Grid
+            item
+            md={8}
+            xs={6}
+            p={1}
+            sx={{ display: { md: 'flex', xs: 'none' }, justifyContent: 'center' }}
+            alignSelf="center"
+          >
             <img src="./logo.png" alt="logo" />
           </Grid>
-          <Grid item>
+          <Grid item md p={1} xs={6}>
             <Typography variant="h6">Contact Us</Typography>
             <nav aria-label="Quick links">
-              <List>
+              <List sx={{ display: { md: 'block', xs: 'none' } }}>
                 <ListItem disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
@@ -98,6 +116,23 @@ function Footer() {
                 </ListItem>
               </List>
             </nav>
+            <Grid container sx={{ display: { md: 'none', xs: 'flex' } }}>
+              <IconButton>
+                <CallIcon sx={{ color: theme.palette.primary.main }} />
+              </IconButton>
+              <IconButton>
+                <Mail sx={{ color: theme.palette.primary.main }} />
+              </IconButton>
+              <IconButton>
+                <LinkedInIcon sx={{ color: theme.palette.primary.main }} />
+              </IconButton>
+              <IconButton>
+                <GitHubIcon sx={{ color: theme.palette.primary.main }} />
+              </IconButton>
+              <Grid item xs={12} sx={{ color: theme.palette.primary.main }}>
+                <ListItemText primary="&#169; 2022 #sageAdi" />
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

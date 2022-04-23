@@ -42,7 +42,18 @@ function ResponsiveAppBar() {
       <AppBar position="fixed">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Box component="img" src="./logo.png" sx={{ width: '40px', marginRight: 1 }} />
+            <Box
+              component="img"
+              src="./logo.png"
+              sx={{
+                width: '40px',
+                marginRight: 1,
+                display: {
+                  xs: 'none',
+                  md: 'flex'
+                }
+              }}
+            />
             <Typography
               variant="h6"
               noWrap
@@ -125,7 +136,18 @@ function ResponsiveAppBar() {
                 ))}
               </Menu>
             </Box>
-
+            <Box
+              component="img"
+              src="./logo.png"
+              sx={{
+                width: '40px',
+                marginRight: 1,
+                display: {
+                  xs: 'flex',
+                  md: 'none'
+                }
+              }}
+            />
             <Typography
               variant="h6"
               noWrap
