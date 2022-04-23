@@ -6,7 +6,9 @@ import LandingPage from './pages/LangingPage/LandingPage';
 import Navbar from './components/Navbar/Navbar';
 import Maps from './pages/Dashboard/Maps';
 import About from './pages/About/About';
-import Spread from './pages/About/Spread';
+import Symptoms from './pages/Symptoms/Symptoms';
+import Prevention from './pages/Prevention/Prevention';
+import Footer from './pages/Footer/Footer';
 
 function App() {
   const [data, setData] = useState([{}]);
@@ -38,7 +40,9 @@ function App() {
       <Dashboard data={data[0]} isLoading={isLoading} />
       <Maps data={data} />
       <About />
-      <Spread />
+      <Symptoms />
+      <Prevention />
+      <Footer />
     </div>
   );
 }

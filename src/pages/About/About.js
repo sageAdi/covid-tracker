@@ -1,7 +1,12 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
-import React from 'react';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import Spread from './Spread';
 
 function About() {
+  const [isSpredVisible, setIsSpreadVisible] = useState(false);
+  const handleClick = () => {
+    setIsSpreadVisible(!isSpredVisible);
+  };
   return (
     <Container
       maxWidth="xl"
@@ -34,7 +39,6 @@ function About() {
             follow local guidance.
           </Typography>
         </Grid>
-
         <Grid
           item
           md={6}
@@ -55,6 +59,10 @@ function About() {
           />
         </Grid>
       </Grid>
+      {isSpredVisible && <Spread />}
+      <Button variant="contained" color="secondary" onClick={handleClick} sx={{ marginTop: 1 }}>
+        {isSpredVisible ? 'Hide' : 'See More'}
+      </Button>
     </Container>
   );
 }

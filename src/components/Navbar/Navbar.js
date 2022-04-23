@@ -42,6 +42,7 @@ function ResponsiveAppBar() {
       <AppBar position="fixed">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
+            <Box component="img" src="./logo.png" sx={{ width: '40px', marginRight: 1 }} />
             <Typography
               variant="h6"
               noWrap

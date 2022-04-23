@@ -18,14 +18,14 @@ function Spread() {
         marginTop: '2rem',
         background: theme.palette.primary.main,
         borderRadius: 2,
-        padding: 1,
+        padding: 2,
         display: 'flex',
         justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'center'
       }}
     >
-      <Typography variant="h6" color="#fff" component="div">
+      <Typography variant="h6" color="#fff">
         HOW DOES CORONA VIRUS SPREAD?
       </Typography>
       <Typography variant="h5" sx={{ fontWeight: 300 }} gutterBottom>

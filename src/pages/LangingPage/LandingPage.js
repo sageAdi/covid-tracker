@@ -9,7 +9,7 @@ function LandingPage() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        background: 'linear-gradient(101.82deg, #f7b733 -1.91%, #fc4a1a 102.01%)'
+        background: 'linear-gradient(101.82deg, #E9C46A -1.91%, #F4A261 102.01%)'
       }}
       id="Home"
     >
@@ -49,7 +49,8 @@ function LandingPage() {
             display="flex"
             sx={{
               justifyContent: { md: 'flex-end', xs: 'center' },
-              position: 'relative'
+              position: 'relative',
+              overflow: 'hidden'
             }}
           >
             <Box
@@ -89,7 +90,7 @@ function LandingPage() {
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Button variant="contained" color="secondary">
+                <Button variant="contained" color="secondary" href="#Updates">
                   Track Covid-19
                 </Button>
               </Grid>
