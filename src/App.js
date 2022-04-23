@@ -5,6 +5,8 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import LandingPage from './pages/LangingPage/LandingPage';
 import Navbar from './components/Navbar/Navbar';
 import Maps from './pages/Dashboard/Maps';
+import About from './pages/About/About';
+import Spread from './pages/About/Spread';
 
 function App() {
   const [data, setData] = useState([{}]);
@@ -35,6 +37,8 @@ function App() {
       <LandingPage />
       <Dashboard data={data[0]} isLoading={isLoading} />
       <Maps data={data} />
+      <About />
+      <Spread />
     </div>
   );
 }

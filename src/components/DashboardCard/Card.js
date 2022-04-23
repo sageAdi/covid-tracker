@@ -40,7 +40,7 @@ DashboardCard.defaultProps = {
 
 DashboardCard.propTypes = {
   title: PropTypes.string.isRequired,
-  body: PropTypes.number,
+  body: PropTypes.oneOfType(PropTypes.number, PropTypes.string),
   isLoading: PropTypes.bool.isRequired
 };
 

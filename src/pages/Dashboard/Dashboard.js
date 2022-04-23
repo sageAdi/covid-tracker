@@ -1,18 +1,18 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import PropTypes from 'prop-types';
-import DashboardCard from '../../components/Card/Card';
+import DashboardCard from '../../components/DashboardCard/Card';
 
 function Dashboard({ data, isLoading }) {
-  console.log(data?.TotalCases);
   return (
     <Container
       maxWidth="xl"
       sx={{
-        marginTop: 2
+        paddingTop: '5rem'
       }}
+      id="Updates"
     >
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h5" gutterBottom color="primary">
         Worldwide Update
       </Typography>
       <Grid container spacing={2} justifyContent="center">
@@ -46,7 +46,7 @@ Dashboard.propTypes = {
     NewCases: PropTypes.number,
     TotalDeaths: PropTypes.number,
     NewDeaths: PropTypes.number,
-    TotalRecovered: PropTypes.number,
+    TotalRecovered: PropTypes.string,
     ActiveCases: PropTypes.number
   }),
   isLoading: PropTypes.bool.isRequired
