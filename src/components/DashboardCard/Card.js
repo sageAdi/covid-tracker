@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import CountUp from 'react-countup';
 import Loader from '../Loader/Loader';
 
-function DashboardCard({ title, body, isLoading }) {
+function DashboardCard({ title, body, isLoading, darkColor, mainColor, lightColor }) {
   return (
     <Card
       sx={{
-        minWidth: 275
+        minWidth: 275,
+        backgroundColor: lightColor
       }}
       elevation={2}
     >
@@ -17,7 +18,7 @@ function DashboardCard({ title, body, isLoading }) {
           sx={{
             fontSize: 14
           }}
-          color="text.secondary"
+          color={mainColor}
           gutterBottom
         >
           {title}
@@ -25,7 +26,7 @@ function DashboardCard({ title, body, isLoading }) {
         {isLoading ? (
           <Loader />
         ) : (
-          <Typography variant="h5" component="div">
+          <Typography variant="h5" component="div" color={darkColor}>
             <CountUp end={body} duration={1} separator="," />
           </Typography>
         )}
@@ -41,7 +42,10 @@ DashboardCard.defaultProps = {
 DashboardCard.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  isLoading: PropTypes.bool.isRequired
+  isLoading: PropTypes.bool.isRequired,
+  darkColor: PropTypes.string.isRequired,
+  mainColor: PropTypes.string.isRequired,
+  lightColor: PropTypes.string.isRequired
 };
 
 export default DashboardCard;

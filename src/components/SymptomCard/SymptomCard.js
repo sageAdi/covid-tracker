@@ -5,10 +5,10 @@ import PropTyes from 'prop-types';
 export default function SymptomCard({ icon, title, body }) {
   const theme = useTheme();
   return (
-    <Card sx={{ height: '100%' }}>
+    <Card sx={{ height: '100%', bgcolor: theme.palette.blue.light }}>
       <CardHeader
         title={title}
-        avatar={<Avatar src={icon} alt="cough" sx={{ bgcolor: theme.palette.primary.main }} />}
+        avatar={<Avatar src={icon} alt="cough" sx={{ bgcolor: theme.palette.blue.dark }} />}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">

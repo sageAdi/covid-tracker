@@ -6,6 +6,26 @@ const overridetheme = createTheme(defaultTheme, {
   palette: {
     primary: {
       main: '#fc4a1a'
+    },
+    red: {
+      dark: 'rgba(255, 7, 58, 1)',
+      main: 'rgba(255, 7, 58, 0.6)',
+      light: 'rgba(255, 7, 58, 0.1)'
+    },
+    green: {
+      dark: 'rgba(40, 167, 69, 1)',
+      main: 'rgba(40, 167, 69, 0.6)',
+      light: 'rgba(40, 167, 69, 0.1)'
+    },
+    blue: {
+      dark: 'rgba(0, 123, 255, 1)',
+      main: 'rgba(0, 123, 255, 0.6)',
+      light: 'rgba(0, 123, 255, 0.1)'
+    },
+    neutral: {
+      dark: 'rgba(108,117,125,1)',
+      main: 'rgba(108,117,125,.6)',
+      light: 'rgba(108,117,125,.1)'
     }
   },
   typography: {

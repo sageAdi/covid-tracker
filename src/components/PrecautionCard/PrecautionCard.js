@@ -6,7 +6,7 @@ import PropTyes from 'prop-types';
 export default function PrecautionCard({ icon, title, body }) {
   const theme = useTheme();
   return (
-    <Card sx={{ height: '100%' }}>
+    <Card sx={{ height: '100%', bgcolor: theme.palette.green.light }}>
       <CardHeader
         title={title}
         avatar={<Avatar src={icon} alt="cough" sx={{ bgcolor: theme.palette.primary.main }} />}

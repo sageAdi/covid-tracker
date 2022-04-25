@@ -34,7 +34,7 @@ function Prevention() {
             What are Covid-19 PREVENTIONS ?
           </Typography>
         </Grid>
-        <Grid item container md={9} xs={12} sx={{ background: '#3d1bb6', borderRadius: 2 }} p={2}>
+        <Grid item container md={9} xs={12} sx={{ borderRadius: 2 }} p={2}>
           {prevention.map((item, index) => (
             <Grid item md={4} xs={12} p={1} key={item}>
               <PrecautionCard icon={icons[index]} title={item} body={description[index]} />

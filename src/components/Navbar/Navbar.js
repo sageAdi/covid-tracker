@@ -19,7 +19,8 @@ function ChangeColorOnScroll({ children }) {
   const theme = useTheme();
   return React.cloneElement(children, {
     style: {
-      backgroundColor: trigger ? theme.palette.primary.main : 'transparent'
+      backgroundColor: trigger ? theme.palette.primary.main : 'transparent',
+      color: trigger ? '#fff' : '#000'
     }
   });
 }
@@ -178,7 +179,7 @@ function ResponsiveAppBar() {
                   onClick={handleCloseNavMenu}
                   sx={{
                     my: 2,
-                    color: 'white',
+                    color: 'inherit',
                     display: 'block'
                   }}
                 >

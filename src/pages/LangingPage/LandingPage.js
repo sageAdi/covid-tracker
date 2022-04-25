@@ -8,8 +8,8 @@ function LandingPage() {
         height: '100vh',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        background: 'linear-gradient(101.82deg, #E9C46A -1.91%, #F4A261 102.01%)'
+        alignItems: 'center'
+        // background: 'linear-gradient(101.82deg, #E9C46A -1.91%, #F4A261 102.01%)'
       }}
       id="Home"
     >
@@ -20,7 +20,7 @@ function LandingPage() {
             md={6}
             xs={12}
             sx={{
-              color: '#fff'
+              color: '#000'
             }}
             container
           >

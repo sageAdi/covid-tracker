@@ -6,7 +6,15 @@ export default function SpreadCard({ icon, title, body }) {
   const Icon = icon;
   const theme = useTheme();
   return (
-    <Card sx={{ maxWidth: '400px', height: '100%', maxHeight: '400px', overflow: 'hidden' }}>
+    <Card
+      sx={{
+        maxWidth: '400px',
+        height: '100%',
+        maxHeight: '400px',
+        overflow: 'hidden',
+        backgroundColor: 'rgba(255, 7, 58, 0.1)'
+      }}
+    >
       <CardHeader
         title={title}
         avatar={

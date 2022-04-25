@@ -31,7 +31,7 @@ function Symptoms() {
         alignItems="center"
         sx={{ flexDirection: { xs: 'column-reverse', md: 'row' } }}
       >
-        <Grid item md={9} xs={12} container sx={{ bgcolor: '#23ae41', borderRadius: 2 }} p={2}>
+        <Grid item md={9} xs={12} container p={2}>
           {symptoms.map((item, index) => (
             <Grid item xs p={1} key={item}>
               <SymptomCard icon={icons[index]} title={item} body={description[index]} />
