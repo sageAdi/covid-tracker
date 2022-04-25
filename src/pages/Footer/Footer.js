@@ -142,16 +142,16 @@ function Footer() {
               </List>
             </nav>
             <Grid container sx={{ display: { md: 'none', xs: 'flex' } }}>
-              <IconButton>
+              <IconButton component="a" href="tel:+918840272023">
                 <CallIcon sx={{ color: '#fff' }} />
               </IconButton>
-              <IconButton>
+              <IconButton component="a" href="mailto:adityamaurya100@gmail.com">
                 <Mail sx={{ color: '#fff' }} />
               </IconButton>
-              <IconButton>
+              <IconButton component="a" href="https://www.linkedin.com/in/sageadi/" target="_blank">
                 <LinkedInIcon sx={{ color: '#fff' }} />
               </IconButton>
-              <IconButton>
+              <IconButton component="a" href="https://github.com/sageAdi" target="_blank">
                 <GitHubIcon sx={{ color: '#fff' }} />
               </IconButton>
               <Grid item xs={12} sx={{ color: '#fff' }}>
