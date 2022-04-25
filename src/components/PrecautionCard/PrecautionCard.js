@@ -9,7 +9,7 @@ export default function PrecautionCard({ icon, title, body }) {
     <Card sx={{ height: '100%', bgcolor: theme.palette.green.light }}>
       <CardHeader
         title={title}
-        avatar={<Avatar src={icon} alt="cough" sx={{ bgcolor: theme.palette.primary.main }} />}
+        avatar={<Avatar src={icon} alt="cough" sx={{ bgcolor: theme.palette.green.main }} />}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">

@@ -11,16 +11,14 @@ function Maps({ data }) {
       maxWidth="xl"
       sx={{
         '& > svg': {
-          width: '80%'
+          width: { md: '80%', xs: '100%' }
         },
         display: 'flex',
         justifyContent: 'center'
       }}
     >
-      {/* <Box> */}
       <MapChart setTooltipContent={setContent} data={data} />
       <ReactTooltip>{content}</ReactTooltip>
-      {/* </Box> */}
     </Container>
   );
 }

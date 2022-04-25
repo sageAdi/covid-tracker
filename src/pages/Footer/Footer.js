@@ -9,8 +9,7 @@ import {
   Typography,
   ListItemIcon,
   Button,
-  IconButton,
-  useTheme
+  IconButton
 } from '@mui/material';
 import CallIcon from '@mui/icons-material/Call';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -19,12 +18,11 @@ import React from 'react';
 import { Mail } from '@mui/icons-material';
 
 function Footer() {
-  const theme = useTheme();
   return (
     <Paper sx={{ marginTop: '5rem', bgcolor: '#222222', color: '#fff' }}>
       <Container maxWidth="xl">
         <Grid container justifyContent="space-between" alignItems="flex-start">
-          <Grid item md xs={6} p={1}>
+          <Grid item md xs={12} p={1}>
             <Typography variant="h6">Quick Links</Typography>
             <nav aria-label="Quick links">
               <List sx={{ display: { md: 'block', xs: 'none' } }}>
@@ -55,12 +53,12 @@ function Footer() {
                 </ListItem>
               </List>
             </nav>
-            <Grid container sx={{ display: { md: 'none', xs: 'flex' } }}>
-              <Button>Home</Button>
-              <Button>Updates</Button>
-              <Button>About</Button>
-              <Button>Symptoms</Button>
-              <Button>Precautions</Button>
+            <Grid container sx={{ display: { md: 'none', xs: 'flex' }, color: '#fff' }}>
+              <Button color="inherit">Home</Button>
+              <Button color="inherit">Updates</Button>
+              <Button color="inherit">About</Button>
+              <Button color="inherit">Symptoms</Button>
+              <Button color="inherit">Precautions</Button>
             </Grid>
           </Grid>
           <Grid
@@ -118,18 +116,18 @@ function Footer() {
             </nav>
             <Grid container sx={{ display: { md: 'none', xs: 'flex' } }}>
               <IconButton>
-                <CallIcon sx={{ color: theme.palette.primary.main }} />
+                <CallIcon sx={{ color: '#fff' }} />
               </IconButton>
               <IconButton>
-                <Mail sx={{ color: theme.palette.primary.main }} />
+                <Mail sx={{ color: '#fff' }} />
               </IconButton>
               <IconButton>
-                <LinkedInIcon sx={{ color: theme.palette.primary.main }} />
+                <LinkedInIcon sx={{ color: '#fff' }} />
               </IconButton>
               <IconButton>
-                <GitHubIcon sx={{ color: theme.palette.primary.main }} />
+                <GitHubIcon sx={{ color: '#fff' }} />
               </IconButton>
-              <Grid item xs={12} sx={{ color: theme.palette.primary.main }}>
+              <Grid item xs={12} sx={{ color: '#fff' }}>
                 <ListItemText primary="&#169; 2022 #sageAdi" />
               </Grid>
             </Grid>

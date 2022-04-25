@@ -1,20 +1,42 @@
-import { Button, Container, Grid, Paper, Typography, Box } from '@mui/material';
+import { Container, Grid, Typography, Box } from '@mui/material';
 import React from 'react';
 
 function LandingPage() {
   return (
-    <Paper
+    <Box
       sx={{
-        height: '100vh',
+        // height: '100vh',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        // bgcolor: '#84dcc6',
+        paddingTop: { md: '6rem', xs: '5rem' }
         // background: 'linear-gradient(101.82deg, #E9C46A -1.91%, #F4A261 102.01%)'
       }}
       id="Home"
     >
       <Container maxWidth="xl">
-        <Grid container justifyContent="space-between" spacing={2}>
+        <Grid
+          container
+          justifyContent="center"
+          flexDirection="column"
+          alignItems="center"
+          sx={{ textAlign: 'center' }}
+        >
+          <Grid item md={6} xs={12}>
+            <Typography variant="h5">ONE ENEMY, WHOLE WORLD IS FIGHTING WITH</Typography>
+          </Grid>
+          <Grid item md={6} xs={12}>
+            <Typography variant="h1">COVID-19</Typography>
+          </Grid>
+          <Grid item sm={8} xs={12}>
+            <Typography variant="h5">
+              The Coronavirus (COVID-19) was first reported in Wuhan, Hubei, China in December 2019,
+              the outbreak was later recognised as a pandemic by the WHO.
+            </Typography>
+          </Grid>
+        </Grid>
+        {/* <Grid container justifyContent="space-between" spacing={2}>
           <Grid
             item
             md={6}
@@ -95,17 +117,10 @@ function LandingPage() {
                 </Button>
               </Grid>
             </Grid>
-            {/* <img
-              src="./covid_logo.png"
-              alt="covid-logo"
-              style={{
-                height: '100%'
-              }}
-            /> */}
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
-    </Paper>
+    </Box>
   );
 }
 

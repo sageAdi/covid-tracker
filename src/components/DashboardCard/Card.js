@@ -8,7 +8,7 @@ function DashboardCard({ title, body, isLoading, darkColor, mainColor, lightColo
   return (
     <Card
       sx={{
-        minWidth: 275,
+        minWidth: 150,
         backgroundColor: lightColor
       }}
       elevation={2}

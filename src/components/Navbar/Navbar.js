@@ -19,8 +19,8 @@ function ChangeColorOnScroll({ children }) {
   const theme = useTheme();
   return React.cloneElement(children, {
     style: {
-      backgroundColor: trigger ? theme.palette.primary.main : 'transparent',
-      color: trigger ? '#fff' : '#000'
+      backgroundColor: trigger ? theme.palette.primary.main : theme.palette.primary.main,
+      color: trigger ? '#fff' : '#fff'
     }
   });
 }

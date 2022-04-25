@@ -8,10 +8,7 @@ export default function SpreadCard({ icon, title, body }) {
   return (
     <Card
       sx={{
-        maxWidth: '400px',
         height: '100%',
-        maxHeight: '400px',
-        overflow: 'hidden',
         backgroundColor: 'rgba(255, 7, 58, 0.1)'
       }}
     >

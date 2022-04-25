@@ -5,7 +5,7 @@ const defaultTheme = createTheme();
 const overridetheme = createTheme(defaultTheme, {
   palette: {
     primary: {
-      main: '#fc4a1a'
+      main: '#222222'
     },
     red: {
       dark: 'rgba(255, 7, 58, 1)',
@@ -31,16 +31,17 @@ const overridetheme = createTheme(defaultTheme, {
   typography: {
     h1: {
       fontSize: '6rem',
-      fontWeight: 700,
+      fontWeight: 500,
       [defaultTheme.breakpoints.down('md')]: {
         fontSize: '4rem'
       }
     },
     h5: {
       fontSize: '1.5rem',
-      fontWeight: 700,
+      fontWeight: 500,
       [defaultTheme.breakpoints.down('md')]: {
-        fontSize: '1rem'
+        fontSize: '1.3rem',
+        fontWeight: 500
       }
     }
   }

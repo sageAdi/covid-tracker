@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import CoronavirusIcon from '@mui/icons-material/Coronavirus';
 import SocialDistanceIcon from '@mui/icons-material/SocialDistance';
@@ -17,32 +17,20 @@ function Spread() {
   ];
   const icons = [CoronavirusIcon, BlockIcon, SocialDistanceIcon];
   return (
-    <Container
-      maxWidth="xl"
-      sx={{
-        marginTop: '2rem',
-        borderRadius: 2,
-        padding: 2,
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        alignItems: 'center'
-      }}
-    >
-      <Typography variant="h6" color="#fff">
-        HOW DOES CORONA VIRUS SPREAD?
-      </Typography>
-      <Typography variant="h5" sx={{ fontWeight: 300 }} gutterBottom>
-        HOW IT SPREADS
-      </Typography>
-      <Grid container justifyContent="center">
+    <Grid container justifyContent="center" pt={2}>
+      <Grid item md={4} xs={12}>
+        <Typography variant="h5" sx={{ fontWeight: 300 }} gutterBottom>
+          How does it SPREADS ?
+        </Typography>
+      </Grid>
+      <Grid item container md xs={12}>
         {titles.map((title, index) => (
           <Grid item sm={4} xs={12} key={title} p={1}>
             <SpreadCard icon={icons[index]} title={title} body={descriptions[index]} />
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </Grid>
   );
 }
 

@@ -25,18 +25,18 @@ function Prevention() {
       }}
       id="Prevention"
     >
+      <Typography variant="h4" color="primary">
+        Get Preventions
+      </Typography>
       <Grid container>
-        <Grid item md={3} xs={12}>
-          <Typography variant="h5" color="primary">
-            Covid-19 preventions
-          </Typography>
-          <Typography variant="h4" gutterBottom>
-            What are Covid-19 PREVENTIONS ?
+        <Grid item md={4} xs={12}>
+          <Typography variant="h5" gutterBottom>
+            What are COVID-19 PREVENTIONS ?
           </Typography>
         </Grid>
-        <Grid item container md={9} xs={12} sx={{ borderRadius: 2 }} p={2}>
+        <Grid item container md xs={12} sx={{ borderRadius: 2 }}>
           {prevention.map((item, index) => (
-            <Grid item md={4} xs={12} p={1} key={item}>
+            <Grid item md={4} sm={6} xs={12} p={1} key={item}>
               <PrecautionCard icon={icons[index]} title={item} body={description[index]} />
             </Grid>
           ))}

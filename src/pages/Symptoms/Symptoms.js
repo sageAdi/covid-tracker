@@ -25,26 +25,26 @@ function Symptoms() {
       }}
       id="Symptoms"
     >
+      <Typography variant="h4" color="primary">
+        Know your symptoms
+      </Typography>
       <Grid
         container
         justifyContent="space-between"
-        alignItems="center"
-        sx={{ flexDirection: { xs: 'column-reverse', md: 'row' } }}
+        // alignItems="center"
+        // sx={{ flexDirection: { xs: 'column-reverse', md: 'row' } }}
       >
-        <Grid item md={9} xs={12} container p={2}>
+        <Grid item md={4} xs={12}>
+          <Typography variant="h5" gutterBottom>
+            What are COVID-19 SYMPTOMS ?
+          </Typography>
+        </Grid>
+        <Grid item md xs={12} container>
           {symptoms.map((item, index) => (
-            <Grid item xs p={1} key={item}>
+            <Grid item md={4} sm={6} xs={12} p={1} key={item}>
               <SymptomCard icon={icons[index]} title={item} body={description[index]} />
             </Grid>
           ))}
-        </Grid>
-        <Grid item md={3} xs={12} p={1}>
-          <Typography variant="h5" color="primary">
-            Know your symptoms
-          </Typography>
-          <Typography variant="h4" gutterBottom>
-            What are covid-19 symptoms ?
-          </Typography>
         </Grid>
       </Grid>
     </Container>
