@@ -1,10 +1,10 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
-import SevereColdIcon from '@mui/icons-material/SevereCold';
-import AirIcon from '@mui/icons-material/Air';
-import fever from './images/fever.png';
-import cough from './images/cough.png';
-import headache from './images/headache.png';
+import fever from './images/fever.svg';
+import cough from './images/cough.svg';
+import headache from './images/headache.svg';
+import soreThroath from './images/soreThroath.svg';
+import sortnessOfBreath from './images/sortnessOfBreath.svg';
 import SymptomCard from '../../components/SymptomCard/SymptomCard';
 
 function Symptoms() {
@@ -16,7 +16,7 @@ function Symptoms() {
     "A sore throat is one of the early, mild symptoms of coronavirus. If you suddenly develop a sore throat, it's best to self-isolate for 14 days as precaution.",
     'One of the symptoms of COVID-19 is shortness of breath. Shortness of breath is less common than fever and cough, but happens in about 30% of people.'
   ];
-  const icons = [cough, fever, headache, SevereColdIcon, AirIcon];
+  const icons = [cough, fever, headache, soreThroath, sortnessOfBreath];
   return (
     <Container
       maxWidth="xl"
@@ -25,7 +25,7 @@ function Symptoms() {
       }}
       id="Symptoms"
     >
-      <Typography variant="h4" color="primary">
+      <Typography variant="h5" color="primary">
         Know your symptoms
       </Typography>
       <Grid
@@ -35,7 +35,7 @@ function Symptoms() {
         // sx={{ flexDirection: { xs: 'column-reverse', md: 'row' } }}
       >
         <Grid item md={4} xs={12}>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h6" gutterBottom>
             What are COVID-19 SYMPTOMS ?
           </Typography>
         </Grid>

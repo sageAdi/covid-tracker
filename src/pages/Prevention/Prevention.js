@@ -1,9 +1,9 @@
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import PrecautionCard from '../../components/PrecautionCard/PrecautionCard';
-import hi from './image/Avoid Human Interaction.png';
-import sg from './image/Avoid Social Gatherings.png';
-import sd from './image/Maintain Social Distance.png';
+import hi from './image/Avoid Human Interaction.svg';
+import sg from './image/Avoid Social Gatherings.svg';
+import sd from './image/Maintain Social Distance.svg';
 
 function Prevention() {
   const prevention = [
@@ -25,12 +25,12 @@ function Prevention() {
       }}
       id="Prevention"
     >
-      <Typography variant="h4" color="primary">
+      <Typography variant="h5" color="primary">
         Get Preventions
       </Typography>
       <Grid container>
         <Grid item md={4} xs={12}>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h6" gutterBottom>
             What are COVID-19 PREVENTIONS ?
           </Typography>
         </Grid>

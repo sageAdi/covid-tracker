@@ -21,11 +21,11 @@ function Dashboard({ data, isLoading }) {
         }}
         id="Updates"
       >
-        <Typography variant="h4" gutterBottom color="primary">
+        <Typography variant="h5" gutterBottom color="primary">
           Worldwide Update
         </Typography>
         <Grid container justifyContent="center">
-          <Grid item p={1} xs>
+          <Grid item p={1} md={3} xs>
             <DashboardCard
               title="Total Cases"
               body={data?.TotalCases}
@@ -35,7 +35,7 @@ function Dashboard({ data, isLoading }) {
               lightColor={theme.palette.red.light}
             />
           </Grid>
-          <Grid item p={1} xs>
+          <Grid item p={1} md={3} xs>
             <DashboardCard
               title="New Cases"
               body={data?.NewCases}
@@ -45,7 +45,7 @@ function Dashboard({ data, isLoading }) {
               lightColor={theme.palette.neutral.light}
             />
           </Grid>
-          <Grid item p={1} xs>
+          <Grid item p={1} md={3} xs>
             <DashboardCard
               title="Total Recovered"
               body={data?.TotalRecovered}
@@ -55,7 +55,7 @@ function Dashboard({ data, isLoading }) {
               lightColor={theme.palette.green.light}
             />
           </Grid>
-          <Grid item p={1} xs>
+          <Grid item p={1} md={3} xs>
             <DashboardCard
               title="ActiveCases"
               body={data?.ActiveCases}

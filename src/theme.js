@@ -26,23 +26,24 @@ const overridetheme = createTheme(defaultTheme, {
       dark: 'rgba(108,117,125,1)',
       main: 'rgba(108,117,125,.6)',
       light: 'rgba(108,117,125,.1)'
+    },
+    text: {
+      dark: 'rgb(17, 17, 17)',
+      light: 'rgb(102, 102, 102)'
     }
   },
   typography: {
     h1: {
       fontSize: '6rem',
-      fontWeight: 500,
+      fontWeight: 800,
+      lineHeight: 2,
       [defaultTheme.breakpoints.down('md')]: {
         fontSize: '4rem'
       }
     },
     h5: {
       fontSize: '1.5rem',
-      fontWeight: 500,
-      [defaultTheme.breakpoints.down('md')]: {
-        fontSize: '1.3rem',
-        fontWeight: 500
-      }
+      fontWeight: 700
     }
   }
 });

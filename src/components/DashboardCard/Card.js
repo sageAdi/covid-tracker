@@ -8,8 +8,11 @@ function DashboardCard({ title, body, isLoading, darkColor, mainColor, lightColo
   return (
     <Card
       sx={{
-        minWidth: 150,
-        backgroundColor: lightColor
+        backgroundColor: lightColor,
+        boxShadow: `0 8px 16px 0 ${lightColor}`,
+        backdropFilter: 'blur(2px)',
+        borderRadius: '10px',
+        border: `1px solid ${lightColor}`
       }}
       elevation={2}
     >

@@ -3,10 +3,6 @@ import React from 'react';
 import Spread from './Spread';
 
 function About() {
-  // const [isSpredVisible, setIsSpreadVisible] = useState(false);
-  // const handleClick = () => {
-  //   setIsSpreadVisible(!isSpredVisible);
-  // };
   return (
     <Container
       maxWidth="xl"
@@ -15,12 +11,12 @@ function About() {
       }}
       id="About"
     >
-      <Typography variant="h4" color="primary">
+      <Typography variant="h5" color="primary">
         About the Disease
       </Typography>
       <Grid container justifyContent="space-between">
         <Grid item md={4}>
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h6" gutterBottom>
             What is CORONA VIRUS ?
           </Typography>
         </Grid>

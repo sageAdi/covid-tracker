@@ -24,13 +24,24 @@ function LandingPage() {
           sx={{ textAlign: 'center' }}
         >
           <Grid item md={6} xs={12}>
-            <Typography variant="h5">ONE ENEMY, WHOLE WORLD IS FIGHTING WITH</Typography>
+            <Typography variant="h6" sx={{ color: '#666666' }}>
+              ONE ENEMY, WHOLE WORLD IS FIGHTING WITH
+            </Typography>
           </Grid>
           <Grid item md={6} xs={12}>
-            <Typography variant="h1">COVID-19</Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                background: '-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
+            >
+              COVID-19
+            </Typography>
           </Grid>
           <Grid item sm={8} xs={12}>
-            <Typography variant="h5">
+            <Typography variant="h6" sx={{ color: '#666666' }}>
               The Coronavirus (COVID-19) was first reported in Wuhan, Hubei, China in December 2019,
               the outbreak was later recognised as a pandemic by the WHO.
             </Typography>

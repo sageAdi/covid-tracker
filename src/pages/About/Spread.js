@@ -19,7 +19,7 @@ function Spread() {
   return (
     <Grid container justifyContent="center" pt={2}>
       <Grid item md={4} xs={12}>
-        <Typography variant="h5" sx={{ fontWeight: 300 }} gutterBottom>
+        <Typography variant="h6" gutterBottom>
           How does it SPREADS ?
         </Typography>
       </Grid>

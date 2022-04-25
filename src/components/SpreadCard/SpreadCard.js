@@ -9,8 +9,13 @@ export default function SpreadCard({ icon, title, body }) {
     <Card
       sx={{
         height: '100%',
-        backgroundColor: 'rgba(255, 7, 58, 0.1)'
+        backgroundColor: 'rgba(255, 7, 58, 0.1)',
+        boxShadow: '0 8px 16px 0 rgba(255, 7, 58, 0.1)',
+        backdropFilter: 'blur(2px)',
+        borderRadius: '10px',
+        border: '1px solid rgba(255, 7, 58, 0.11)'
       }}
+      elevation={2}
     >
       <CardHeader
         title={title}
