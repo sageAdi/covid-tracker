@@ -4,8 +4,6 @@ import PropTyes from 'prop-types';
 
 export default function SymptomCard({ icon, title, body }) {
   const theme = useTheme();
-  console.log(icon);
-  // const Icon = icon;
   return (
     <Card
       sx={{

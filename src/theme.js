@@ -5,7 +5,8 @@ const defaultTheme = createTheme();
 const overridetheme = createTheme(defaultTheme, {
   palette: {
     primary: {
-      main: '#222222'
+      main: 'rgba(34, 34, 34,1)',
+      light: 'rgba(255, 255, 255,0.2)'
     },
     red: {
       dark: 'rgba(255, 7, 58, 1)',

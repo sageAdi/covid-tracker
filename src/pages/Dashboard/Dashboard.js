@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import PropTypes from 'prop-types';
-import DashboardCard from '../../components/DashboardCard/Card';
+import DashboardCard from '../../components/DashboardCard/DashboardCard';
 
 function Dashboard({ data, isLoading }) {
   const theme = useTheme();
@@ -25,7 +25,7 @@ function Dashboard({ data, isLoading }) {
           Worldwide Update
         </Typography>
         <Grid container justifyContent="center">
-          <Grid item p={1} md={3} xs>
+          <Grid item p={1} md={3} xs={6}>
             <DashboardCard
               title="Total Cases"
               body={data?.TotalCases}
@@ -35,7 +35,7 @@ function Dashboard({ data, isLoading }) {
               lightColor={theme.palette.red.light}
             />
           </Grid>
-          <Grid item p={1} md={3} xs>
+          <Grid item p={1} md={3} xs={6}>
             <DashboardCard
               title="New Cases"
               body={data?.NewCases}
@@ -45,7 +45,7 @@ function Dashboard({ data, isLoading }) {
               lightColor={theme.palette.neutral.light}
             />
           </Grid>
-          <Grid item p={1} md={3} xs>
+          <Grid item p={1} md={3} xs={6}>
             <DashboardCard
               title="Total Recovered"
               body={data?.TotalRecovered}
@@ -55,7 +55,7 @@ function Dashboard({ data, isLoading }) {
               lightColor={theme.palette.green.light}
             />
           </Grid>
-          <Grid item p={1} md={3} xs>
+          <Grid item p={1} md={3} xs={6}>
             <DashboardCard
               title="ActiveCases"
               body={data?.ActiveCases}

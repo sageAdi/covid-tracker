@@ -119,6 +119,7 @@ function ResponsiveAppBar() {
                     onClick={handleCloseNavMenu}
                     sx={{
                       width: '100%'
+                      // borderTop: '1px solid rgba(0,0,0,0.3)'
                     }}
                   >
                     <Button
@@ -127,7 +128,6 @@ function ResponsiveAppBar() {
                       key={page}
                       onClick={handleCloseNavMenu}
                       sx={{
-                        my: 2,
                         display: 'block'
                       }}
                     >

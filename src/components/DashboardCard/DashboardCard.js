@@ -12,7 +12,8 @@ function DashboardCard({ title, body, isLoading, darkColor, mainColor, lightColo
         boxShadow: `0 8px 16px 0 ${lightColor}`,
         backdropFilter: 'blur(2px)',
         borderRadius: '10px',
-        border: `1px solid ${lightColor}`
+        border: `1px solid ${lightColor}`,
+        height: '100%'
       }}
       elevation={2}
     >
@@ -29,7 +30,7 @@ function DashboardCard({ title, body, isLoading, darkColor, mainColor, lightColo
         {isLoading ? (
           <Loader />
         ) : (
-          <Typography variant="h5" component="div" color={darkColor}>
+          <Typography sx={{ fontSize: '1rem', fontWeight: 500 }} color={darkColor}>
             <CountUp end={body} duration={1} separator="," />
           </Typography>
         )}
