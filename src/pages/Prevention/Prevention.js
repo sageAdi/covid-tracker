@@ -21,7 +21,8 @@ function Prevention() {
     <Container
       maxWidth="xl"
       sx={{
-        marginTop: '5rem'
+        marginTop: '5rem',
+        scrollMarginTop: '5rem'
       }}
       id="Prevention"
     >
