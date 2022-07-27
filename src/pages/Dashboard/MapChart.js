@@ -2,9 +2,10 @@ import React, { memo } from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import PropTypes from 'prop-types';
 import { scaleQuantile } from 'd3-scale';
+import feature from './feature.json';
 
-const geoUrl =
-  'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
+// const geoUrl =
+//   'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 
 // const rounded = (num) => {
 //   if (num > 1000000000) {
@@ -37,12 +38,12 @@ function MapChart({ setTooltipContent, data }) {
         scale: 200
       }}
     >
-      <Geographies geography={geoUrl}>
+      <Geographies geography={feature}>
         {({ geographies }) =>
           geographies.map((geo) => {
-            const { NAME } = geo.properties;
-            let covidStatus = data.length > 0 && data.find((country) => country.Country === NAME);
-            if (NAME === 'United States of America') {
+            const { name } = geo.properties;
+            let covidStatus = data.length > 0 && data.find((country) => country.Country === name);
+            if (name === 'United States') {
               covidStatus = data.find((country) => country.Country === 'USA');
             }
             return (
@@ -53,7 +54,7 @@ function MapChart({ setTooltipContent, data }) {
                   setTooltipContent(
                     <>
                       <p>
-                        {NAME} {/* — {rounded(POP_EST)} */}
+                        {name} {/* — {rounded(POP_EST)} */}
                       </p>
                       <p>TotalCases — {covidStatus?.TotalCases}</p>
                       <p>NewCases — {covidStatus?.NewCases}</p>
