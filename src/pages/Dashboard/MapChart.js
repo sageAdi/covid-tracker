@@ -19,7 +19,7 @@ import feature from './feature.json';
 
 function MapChart({ setTooltipContent, data }) {
   const colorScale = scaleQuantile()
-    .domain(data.map((d) => d.TotalCases))
+    .domain(data?.map((d) => d?.cases?.total))
     .range([
       '#ffedea',
       '#ffcec5',
@@ -42,10 +42,12 @@ function MapChart({ setTooltipContent, data }) {
         {({ geographies }) =>
           geographies.map((geo) => {
             const { name } = geo.properties;
-            let covidStatus = data.length > 0 && data.find((country) => country.Country === name);
-            if (name === 'United States') {
-              covidStatus = data.find((country) => country.Country === 'USA');
-            }
+            // console.log(name);
+            // console.log(data.find((item) => item.country === 'USA'));
+            let covidStatus = data.length > 0 && data.find((country) => country.country === name);
+            // if (name === 'United States') {
+            //   covidStatus = data.find((country) => country.country === 'USA');
+            // }
             return (
               <Geography
                 key={geo.rsmKey}
@@ -56,11 +58,11 @@ function MapChart({ setTooltipContent, data }) {
                       <p>
                         {name} {/* — {rounded(POP_EST)} */}
                       </p>
-                      <p>TotalCases — {covidStatus?.TotalCases}</p>
-                      <p>NewCases — {covidStatus?.NewCases}</p>
-                      <p>TotalDeaths — {covidStatus?.TotalDeaths}</p>
-                      <p>NewDeaths — {covidStatus?.NewDeaths}</p>
-                      <p>TotalRecovered — {covidStatus?.TotalRecovered}</p>
+                      <p>TotalCases — {covidStatus?.cases?.total}</p>
+                      <p>Active — {covidStatus?.cases?.active}</p>
+                      <p>TotalDeaths — {covidStatus?.deaths?.total}</p>
+                      <p>NewDeaths — {covidStatus?.deaths?.new}</p>
+                      <p>TotalRecovered — {covidStatus?.cases?.recovered}</p>
                     </>
                   );
                 }}
@@ -69,7 +71,7 @@ function MapChart({ setTooltipContent, data }) {
                 }}
                 style={{
                   default: {
-                    fill: covidStatus ? colorScale(covidStatus?.TotalCases) : '#D6D6DA',
+                    fill: covidStatus ? colorScale(covidStatus?.cases?.total) : '#D6D6DA',
                     outline: 'none'
                   },
                   hover: {

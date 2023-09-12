@@ -5,6 +5,18 @@ import DashboardCard from '../../components/DashboardCard/DashboardCard';
 
 function Dashboard({ data, isLoading }) {
   const theme = useTheme();
+  let totalCases = 0,
+    activeCases = 0,
+    recoveredCases = 0,
+    newCases = 0;
+  data?.map((item) => {
+    totalCases += item?.cases?.total;
+    activeCases += item?.cases?.active;
+    recoveredCases += item?.cases?.recovered;
+    if (item?.cases?.new) {
+      newCases += parseInt(item?.cases?.new.replace('+', ''));
+    }
+  });
   return (
     <Box
       sx={
@@ -28,7 +40,7 @@ function Dashboard({ data, isLoading }) {
           <Grid item p={1} md={3} xs={6}>
             <DashboardCard
               title="Total Cases"
-              body={data?.TotalCases}
+              body={totalCases}
               isLoading={isLoading}
               mainColor={theme.palette.red.main}
               darkColor={theme.palette.red.dark}
@@ -38,7 +50,7 @@ function Dashboard({ data, isLoading }) {
           <Grid item p={1} md={3} xs={6}>
             <DashboardCard
               title="New Cases"
-              body={data?.NewCases}
+              body={newCases}
               isLoading={isLoading}
               mainColor={theme.palette.neutral.main}
               darkColor={theme.palette.neutral.dark}
@@ -48,7 +60,7 @@ function Dashboard({ data, isLoading }) {
           <Grid item p={1} md={3} xs={6}>
             <DashboardCard
               title="Total Recovered"
-              body={data?.TotalRecovered}
+              body={recoveredCases}
               isLoading={isLoading}
               mainColor={theme.palette.green.main}
               darkColor={theme.palette.green.dark}
@@ -58,7 +70,7 @@ function Dashboard({ data, isLoading }) {
           <Grid item p={1} md={3} xs={6}>
             <DashboardCard
               title="ActiveCases"
-              body={data?.ActiveCases}
+              body={activeCases}
               isLoading={isLoading}
               mainColor={theme.palette.blue.main}
               darkColor={theme.palette.blue.dark}
